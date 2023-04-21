@@ -9,12 +9,37 @@ import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import java.io.StringReader;
-import java.io.StringWriter;
-import java.io.Writer;
+import java.io.*;
+import java.util.Scanner;
+
 import org.w3c.dom.*;
 public class PrettyPrintController {
+    public String run()
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Complete Filepath or quit:");
+        String response ="";
+        while ( ( response = scanner.nextLine()) != "quit")
+        {
+            if ( ! response.isBlank()) break;
+        }
+        File file = new File( response );
+        if ( ! file.exists())
+        {
+            System.err.println("File " + response +" doesn't exist.");
+            return "";
+        }
+        try {
+            scanner = new Scanner(file);
+        } catch (FileNotFoundException e) {
+            //throw new RuntimeException(e);
+            return e.getLocalizedMessage();
 
+        }
+        String xmlstring = scanner.next();
+        //System.out.println(prettyPrintByTransformer(xmlstring));
+        return xmlstring;
+    }
     public static String prettyPrintByTransformer(String xmlString, int indent, boolean ignoreDeclaration) {
 
         try {

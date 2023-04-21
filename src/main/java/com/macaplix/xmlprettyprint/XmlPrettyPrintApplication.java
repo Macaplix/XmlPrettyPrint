@@ -8,6 +8,8 @@ public class XmlPrettyPrintApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(XmlPrettyPrintApplication.class, args);
+        PrettyPrintController printController = new PrettyPrintController();
+
     }
 
 }
