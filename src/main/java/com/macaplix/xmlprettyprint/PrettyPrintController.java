@@ -13,6 +13,8 @@ import java.util.Scanner;
 
 import org.w3c.dom.*;
 public class PrettyPrintController {
+    //private static final String ROOT_URL = "/Users/pe/classeur/banques/boursorama/2022/piratageCB/";
+    private static final String ROOT_URL = "/Users/pe/classeur/banques/boursorama/2023hackageCB/info/";
     public String run()
     {
 /*
@@ -65,10 +67,10 @@ public class PrettyPrintController {
         try {
             TransformerFactory tFactory=TransformerFactory.newInstance();
 
-            Source xslDoc=new StreamSource( new File("/Users/pe/classeur/banques/boursorama/2022/piratageCB/main_info.xsl"));
-            Source xmlDoc=new StreamSource( new File("/Users/pe/classeur/banques/boursorama/2022/piratageCB/main_info.xml"));
+            Source xslDoc=new StreamSource( new File( ROOT_URL + "main_info.xsl"));
+            Source xmlDoc=new StreamSource( new File(ROOT_URL + "main_info.xml"));
 
-            String outputFileName="/Users/pe/classeur/banques/boursorama/2022/piratageCB/main_info.html";
+            String outputFileName=ROOT_URL + "main_info.html";
 
             OutputStream htmlFile=new FileOutputStream(outputFileName);
             Transformer trasform=tFactory.newTransformer(xslDoc);
