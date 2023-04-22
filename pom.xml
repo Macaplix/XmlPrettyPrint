@@ -16,6 +16,13 @@
     <properties>
         <java.version>20</java.version>
     </properties>
+    <!--repositories>
+        <repository>
+            <id>AsposeJavaAPI</id>
+            <name>Aspose Java API</name>
+            <url>https://repository.aspose.com/repo/</url>
+        </repository>
+    </repositories-->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -36,6 +43,12 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+        <!--dependency>
+            <groupId>com.aspose</groupId>
+            <artifactId>aspose-tasks</artifactId>
+            <version>version of aspose-tasks API</version>
+            <classifier>jdk17</classifier>
+        </dependency-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
