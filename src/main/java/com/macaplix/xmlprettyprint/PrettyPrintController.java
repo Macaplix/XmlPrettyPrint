@@ -13,8 +13,8 @@ import java.util.Scanner;
 
 import org.w3c.dom.*;
 public class PrettyPrintController {
-    //private static final String ROOT_URL = "/Users/pe/classeur/banques/boursorama/2022/piratageCB/";
-    private static final String ROOT_URL = "/Users/pe/classeur/banques/boursorama/2023hackageCB/info/";
+    private static final String ROOT_URL = "/Users/pe/classeur/banques/boursorama/2022/piratageCB/";
+    //private static final String ROOT_URL = "/Users/pe/classeur/banques/boursorama/2023hackageCB/info/";
     public String run()
     {
 /*
